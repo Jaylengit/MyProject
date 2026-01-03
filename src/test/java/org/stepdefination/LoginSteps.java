@@ -51,7 +51,7 @@ public class LoginSteps
 			
 		}
 		
-		
+		Thread.sleep(2000);
 		// Invalid Login
 		
 		else if (expected.equalsIgnoreCase("invalid"))
