@@ -38,7 +38,7 @@ public class LoginSteps
 	}
 	
 	@Then("the login result should be {string}")
-	public void the_login_result_should_be(String expected)
+	public void the_login_result_should_be(String expected) throws InterruptedException
 	{
 		String currentURL = driver.getCurrentUrl();
 		
@@ -77,7 +77,9 @@ public class LoginSteps
 			Assert.assertEquals("Locked user message did not matach!", expectedMessage, msg);
 			
 		}
+		Thread.sleep(2000);
 		
 		driver.quit();
+		
 	}
 }
